@@ -34,7 +34,7 @@ return new class extends Migration
             $table->boolean('on_time')->default(true);
             // treno cancellato
             $table->boolean('cancelled')->default(false);
-            
+            $table->timestamps();
         });
     }
 
