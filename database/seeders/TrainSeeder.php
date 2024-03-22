@@ -19,12 +19,23 @@ class TrainSeeder extends Seeder
     {
         //for loop
         for ($i = 0; $i < 10; $i++) {
-           $train = new Train(); 
-           $train->company = $faker->text(50);
-          
-           
+          //step 1
+          $train = new Train();
 
-           $train->save();
+          //step 2
+          $train->company = $faker->text(50);
+					$train->departure_station = "Milano";
+					$train->arrival_station= "Roma";
+					$train->departure_time;
+					$train->arrival_time;
+					$train->train_code;
+					$train->number_of_carriages;
+					$train->on_time;
+					$train->cancelled;
+           
+          //step 3
+          $train->save();
         }
+				
     }
 }
