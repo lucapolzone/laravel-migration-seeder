@@ -8,7 +8,7 @@ use Faker\Generator as Faker;
 
 use App\Models\Train;
 
-class TrainsSeeder extends Seeder
+class TrainSeeder extends Seeder
 {
     /**
      * Run the database seeds.
