@@ -22,3 +22,23 @@ Create Model relativo ed un Controller per mostrare nella home page tutti i tren
 ## Bonus
 Create una seconda migration per aggiungere/modificare una colonna della tabella
 
+<br><br>
+
+# Esercizio: Laravel: Migration & Seeder (21/03/2024)
+stesso nome repo: `laravel-migration-seeder`
+
+Oggi proseguiamo con l'esercizio di ieri Train Station, sempre nella stessa repo: laravel-migration-seeder.
+
+Aggiungiamo un seeder per la classe Train usando FakerPHP.
+
+## BONUS 1
+Implementare il seeder tramite un file csv.
+
+## BONUS 2
+Implementare la paginazione dei risultati.
+Per formattare correttamente i links:
+1. importare la classe Paginator con use Illuminate\Pagination\Paginator; nel file app\Providers\AppServiceProvider.php
+2. aggiungere la riga Paginator::useBootstrap(); nel metodo boot()
+
+<b>PS.</b> Ho aggiornato la repo template con il downgrade a Laravel 9.2. <br>
+La versione corretta del pacchetto doctrine\dbal è già nel composer.json e non c'è bisogno di aggiungerlo. 
