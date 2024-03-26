@@ -15,27 +15,29 @@ class TrainSeeder extends Seeder
      *
      * @return void
      */
-    public function run(Faker $faker)
+    // public function run(Faker $faker)
+    public function run()
     {
         //for loop
-        for ($i = 0; $i < 10; $i++) {
+        // for ($i = 0; $i < 10; $i++) {
           //step 1
           $train = new Train();
 
           //step 2
-          $train->company = $faker->text(50);
+          // $train->company = $faker->text(50);
+          $train->company = "Trenitalia";
 					$train->departure_station = "Milano";
 					$train->arrival_station= "Roma";
-					$train->departure_time;
-					$train->arrival_time;
-					$train->train_code;
-					$train->number_of_carriages;
-					$train->on_time;
-					$train->cancelled;
+					$train->departure_time= "13:03:00";
+					$train->arrival_time= "17:03:00";
+					$train->train_code= "2918128";
+					$train->number_of_carriages= 7;
+					// $train->on_time;
+					// $train->cancelled;
            
           //step 3
           $train->save();
-        }
+        // }
 				
     }
 }
