@@ -13,7 +13,8 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+    {   
+        //chiamo tutti i Seeder nel call
         $this->call([TrainSeeder::class]);
     }
 }
