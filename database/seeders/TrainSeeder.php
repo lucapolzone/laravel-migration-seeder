@@ -17,27 +17,49 @@ class TrainSeeder extends Seeder
      */
     // public function run(Faker $faker)
     public function run()
-    {
-        //for loop
-        // for ($i = 0; $i < 10; $i++) {
+    { 
+
+        $trains_data = [
+          [
+            "company" => "Trenitalia",
+            "departure_station" => "Milano",
+            "arrival_station" => "Roma",
+            "departure_time" => "13:03:00",
+            "arrival_time" => "17:03:00",
+            "train_code" => "2652729",
+            "number_of_carriages" => 7
+          ],
+          [
+            "company" => "Trenitalia",
+            "departure_station" => "Genova",
+            "arrival_station" => "Milano",
+            "departure_time" => "06:03:00",
+            "arrival_time" => "09:03:00",
+            "train_code" => "2652727",
+            "number_of_carriages" => 8
+          ]
+        ];
+
+        foreach ($trains_data as $train_data) {
+
           //step 1
           $train = new Train();
 
           //step 2
           // $train->company = $faker->text(50);
-          $train->company = "Trenitalia";
-					$train->departure_station = "Milano";
-					$train->arrival_station= "Roma";
-					$train->departure_time= "13:03:00";
-					$train->arrival_time= "17:03:00";
-					$train->train_code= "2918128";
-					$train->number_of_carriages= 7;
-					// $train->on_time;
-					// $train->cancelled;
-           
+          $train->company = $train_data['company'];
+          $train->departure_station = $train_data['departure_station'];
+          $train->arrival_station= $train_data['arrival_station'];
+          $train->departure_time= $train_data['departure_time'];
+          $train->arrival_time= $train_data['arrival_time'];
+          $train->train_code= $train_data['train_code'];
+          $train->number_of_carriages= $train_data['number_of_carriages'];
+          // $train->on_time;
+          // $train->cancelled;
+            
           //step 3
           $train->save();
-        // }
+        }
 				
     }
 }
